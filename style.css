@@ -1,0 +1,319 @@
+/* ================================
+   Global Styles
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* ================================
+   Main Application
+================================ */
+
+.app-container {
+    width: 100%;
+    max-width: 950px;
+}
+
+
+/* ================================
+   Header
+================================ */
+
+.app-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.app-header h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.app-header p {
+    color: #94a3b8;
+    font-size: 17px;
+}
+
+
+/* ================================
+   Test Card
+================================ */
+
+.test-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ================================
+   Statistics
+================================ */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+}
+
+.stat-label {
+    display: block;
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* ================================
+   Typing Passage
+================================ */
+
+.passage-container {
+    margin-bottom: 25px;
+}
+
+.passage-container h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+#text-display {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 20px;
+    line-height: 1.8;
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+
+/* ================================
+   Typing Input
+================================ */
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+#typing-input {
+    width: 100%;
+    min-height: 140px;
+    resize: vertical;
+    padding: 18px;
+    border: 2px solid #334155;
+    border-radius: 12px;
+    background: #0f172a;
+    color: #f8fafc;
+    font-size: 17px;
+    line-height: 1.6;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+#typing-input:focus {
+    border-color: #38bdf8;
+}
+
+#typing-input::placeholder {
+    color: #64748b;
+}
+
+
+/* ================================
+   Buttons
+================================ */
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+#start-btn {
+    background: #38bdf8;
+    color: #082f49;
+}
+
+#restart-btn {
+    background: #334155;
+    color: #f8fafc;
+}
+
+
+/* ================================
+   Result Section
+================================ */
+
+.result-section {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 18px;
+    padding: 30px;
+    margin-top: 25px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.result-section h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.result-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.result-item {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.result-item span {
+    display: block;
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+.result-item strong {
+    font-size: 30px;
+}
+
+
+/* ================================
+   Result Button
+================================ */
+
+#new-test-btn {
+    background: #38bdf8;
+    color: #082f49;
+}
+
+
+/* ================================
+   Hidden Class
+================================ */
+
+.hidden {
+    display: none;
+}
+
+
+/* ================================
+   Footer
+================================ */
+
+.app-footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* ================================
+   Responsive Design
+================================ */
+
+@media (max-width: 700px) {
+
+    .app-header h1 {
+        font-size: 32px;
+    }
+
+    .test-card {
+        padding: 20px;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .result-container {
+        grid-template-columns: 1fr;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .app-header h1 {
+        font-size: 28px;
+    }
+
+    .app-header p {
+        font-size: 14px;
+    }
+
+    #text-display {
+        font-size: 16px;
+    }
+
+    #typing-input {
+        font-size: 16px;
+    }
+}

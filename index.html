@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Typing Speed Test</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <!-- Application Header -->
+        <header class="app-header">
+            <h1>Typing Speed Test</h1>
+            <p>Test your typing speed and accuracy</p>
+        </header>
+
+
+        <!-- Test Area -->
+        <section class="test-card">
+
+            <!-- Statistics -->
+            <div class="stats-container">
+
+                <div class="stat-box">
+                    <span class="stat-label">Time</span>
+                    <span id="timer" class="stat-value">60</span>
+                </div>
+
+                <div class="stat-box">
+                    <span class="stat-label">WPM</span>
+                    <span id="wpm" class="stat-value">0</span>
+                </div>
+
+                <div class="stat-box">
+                    <span class="stat-label">Accuracy</span>
+                    <span id="accuracy" class="stat-value">100%</span>
+                </div>
+
+                <div class="stat-box">
+                    <span class="stat-label">Errors</span>
+                    <span id="errors" class="stat-value">0</span>
+                </div>
+
+            </div>
+
+
+            <!-- Typing Passage -->
+            <div class="passage-container">
+
+                <h2>Type the following text:</h2>
+
+                <p id="text-display">
+                    The quick brown fox jumps over the lazy dog.
+                    Practice makes progress, and consistent typing
+                    can help you become faster and more accurate.
+                </p>
+
+            </div>
+
+
+            <!-- Typing Input -->
+            <div class="input-container">
+
+                <textarea
+                    id="typing-input"
+                    placeholder="Start typing here..."
+                    rows="5"
+                    disabled
+                ></textarea>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="button-container">
+
+                <button id="start-btn">
+                    Start Test
+                </button>
+
+                <button id="restart-btn">
+                    Restart Test
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Result Section -->
+        <section id="result-section" class="result-section hidden">
+
+            <h2>Test Complete!</h2>
+
+            <div class="result-container">
+
+                <div class="result-item">
+                    <span>Final WPM</span>
+                    <strong id="final-wpm">0</strong>
+                </div>
+
+                <div class="result-item">
+                    <span>Accuracy</span>
+                    <strong id="final-accuracy">0%</strong>
+                </div>
+
+                <div class="result-item">
+                    <span>Total Errors</span>
+                    <strong id="final-errors">0</strong>
+                </div>
+
+            </div>
+
+            <button id="new-test-btn">
+                Try Again
+            </button>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Typing Speed Test &copy; 2026</p>
+        </footer>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
