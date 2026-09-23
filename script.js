@@ -147,7 +147,7 @@ function startTimer() {
 // Calculate Typing Statistics
 // ========================================
 
-function calculateStatsBroken() {
+function calculateStats() {
 
     const typedText = typingInput.value;
 
