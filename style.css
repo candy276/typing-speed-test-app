@@ -317,3 +317,17 @@ button:hover {
         font-size: 16px;
     }
 }
+/* Character Highlighting */
+
+.typing-text span {
+    transition: color 0.15s ease;
+}
+
+.typing-text span.correct {
+    color: #22c55e;
+}
+
+.typing-text span.incorrect {
+    color: #ef4444;
+    text-decoration: underline;
+}

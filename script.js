@@ -58,7 +58,15 @@ function selectPassage() {
 
     currentPassage = passages[randomIndex];
 
-    textDisplay.textContent = currentPassage;
+    textDisplay.innerHTML = "";
+
+    currentPassage.split("").forEach((character) => {
+        const span = document.createElement("span");
+
+        span.textContent = character;
+
+        textDisplay.appendChild(span);
+    });
 }
 
 
@@ -226,6 +234,25 @@ typingInput.addEventListener("input", () => {
     calculateStats();
 
     const typedText = typingInput.value;
+    const characters = textDisplay.querySelectorAll("span");
+
+    characters.forEach((character, index) => {
+
+        character.classList.remove("correct");
+        character.classList.remove("incorrect");
+
+        if (index < typedText.length) {
+
+            if (typedText[index] === currentPassage[index]) {
+                character.classList.add("correct");
+            } else {
+                character.classList.add("incorrect");
+            }
+
+        }
+
+    });
+
 
     // Automatically finish when the entire passage is typed
     if (typedText.length >= currentPassage.length) {
